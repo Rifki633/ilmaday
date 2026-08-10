@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Fahma — 19 ✿</title>
+<meta name="description" content="A little birthday corner made especially for Fahma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#f6c945; --pale:#fff8d9; --cream:#fffdf4; --ink:#2a281f;
+  --muted:#777263; --line:#eadfbb; --white:#fffefa;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+::selection{background:#f6c945;color:#2a281f}
+.cursor-flower{position:fixed;pointer-events:none;z-index:99;font-size:18px;animation:floatUp .9s ease-out forwards}
+@keyframes floatUp{to{transform:translateY(-35px) rotate(25deg);opacity:0}}
+.petals{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.petal{position:absolute;top:-30px;opacity:.7;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(420deg)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:18px 5vw;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:multiply}
+.logo{font-family:"Playfair Display",serif;font-style:italic;font-size:22px}
+.navpill{background:rgba(255,253,244,.76);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:12px;letter-spacing:.04em}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;padding:110px 6vw 70px;background:
+radial-gradient(circle at 20% 20%,#fff0a6 0,transparent 25%),
+radial-gradient(circle at 85% 70%,#ffeeb0 0,transparent 28%),var(--cream)}
+.hero-inner{text-align:center;max-width:920px;position:relative;z-index:3}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.28em;color:#8b7a39;margin-bottom:18px}
+h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(62px,12vw,150px);line-height:.82;margin:0;letter-spacing:-.055em}
+h1 em{font-style:italic;display:block;font-size:.72em;margin-top:14px}
+.hero-sub{max-width:530px;margin:28px auto 0;color:var(--muted);line-height:1.8;font-size:15px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:14px 20px;border-radius:999px;background:var(--ink);color:white;text-decoration:none;font-size:13px;transition:.3s;box-shadow:0 10px 30px #2a281f22}
+.cta:hover{transform:translateY(-3px);box-shadow:0 16px 36px #2a281f30}
+.flower-orbit{position:absolute;inset:-45px;pointer-events:none}
+.flower-orbit span{position:absolute;font-size:clamp(25px,4vw,48px);animation:sway 3s ease-in-out infinite}
+.flower-orbit span:nth-child(1){left:3%;top:30%}.flower-orbit span:nth-child(2){right:5%;top:17%;animation-delay:.7s}
+.flower-orbit span:nth-child(3){left:11%;bottom:15%;animation-delay:1.2s}.flower-orbit span:nth-child(4){right:13%;bottom:10%;animation-delay:1.8s}
+@keyframes sway{50%{transform:translateY(-10px) rotate(8deg)}}
+.section{padding:110px 6vw;position:relative;z-index:2}
+.section-inner{max-width:1080px;margin:auto}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:#9a8842;margin-bottom:12px}
+.title{font-family:"Playfair Display",serif;font-size:clamp(40px,6vw,72px);font-weight:500;line-height:1;margin:0 0 18px}
+.lead{color:var(--muted);line-height:1.9;max-width:650px}
+.note{margin-top:45px;background:var(--white);border:1px solid var(--line);padding:clamp(28px,5vw,55px);border-radius:28px;box-shadow:0 20px 60px #8d7c3210;position:relative}
+.note:before{content:"✿";position:absolute;right:28px;top:22px;font-size:26px;color:var(--yellow)}
+.note p{font-family:"Playfair Display",serif;font-size:clamp(19px,2.5vw,26px);line-height:1.75;margin:0}
+.note .sign{font-family:"DM Sans",sans-serif;font-size:13px;color:var(--muted);margin-top:28px}
+.memories{background:var(--pale)}
+.gallery{columns:3 230px;column-gap:18px;margin-top:45px}
+.card{break-inside:avoid;margin:0 0 18px;border-radius:20px;overflow:hidden;background:white;border:1px solid #eadfbb88;box-shadow:0 12px 35px #8d7c3210;transform:translateY(20px);opacity:0;transition:opacity .8s ease,transform .8s ease,box-shadow .3s}
+.card.visible{opacity:1;transform:none}
+.card:hover{box-shadow:0 20px 45px #8d7c3220;transform:translateY(-4px)}
+.card img{width:100%;display:block;height:auto;filter:saturate(.9) contrast(.98)}
+.card figcaption{padding:12px 14px;font-size:11px;color:#817b68}
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:45px}
+.reason{padding:25px;border:1px solid var(--line);border-radius:22px;background:#fffefa;min-height:190px;transition:.3s}
+.reason:hover{transform:translateY(-6px);border-color:#dfc66f}
+.reason .num{font-family:"Playfair Display";font-size:31px;color:var(--yellow)}
+.reason h3{font-family:"Playfair Display";font-size:23px;font-weight:500;margin:18px 0 8px}
+.reason p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+.music{background:#25231c;color:#fffaf0;text-align:center}
+.music .eyebrow{color:#e9ca61}
+.music .lead{margin:auto;color:#bcb8a9}
+.musicbox{margin:38px auto 0;max-width:560px;border:1px solid #ffffff1f;border-radius:28px;padding:30px;background:#ffffff08}
+.disc{width:105px;height:105px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;background:radial-gradient(circle,#f8d75d 0 8%,#342f22 9% 18%,#f8d75d 19% 21%,#29261f 22% 100%);animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.musicbox h3{font-family:"Playfair Display";font-size:28px;margin:0}
+.musicbox p{color:#aaa595;font-size:12px;line-height:1.7}
+.musiclink{display:inline-block;margin-top:12px;color:#f6d65e;text-decoration:none;border-bottom:1px solid #f6d65e55;padding-bottom:3px}
+.final{min-height:85vh;display:grid;place-items:center;text-align:center;background:
+radial-gradient(circle at 50% 45%,#ffe889 0,transparent 30%),var(--cream)}
+.final h2{font-family:"Playfair Display";font-weight:500;font-size:clamp(48px,9vw,100px);line-height:.95;margin:0}
+.final h2 em{font-style:italic}
+.final p{max-width:570px;margin:28px auto;color:var(--muted);line-height:1.9}
+#surprise{display:none;margin:25px auto 0;max-width:620px;padding:28px;border:1px dashed #d9bd4d;border-radius:24px;background:#fffdf0;font-family:"Playfair Display";font-size:20px;line-height:1.7}
+footer{padding:25px;text-align:center;font-size:10px;letter-spacing:.1em;color:#9b947e}
+@media(max-width:720px){
+ nav{padding:14px 18px}.navpill{display:none}
+ .section{padding:78px 20px}.reasons{grid-template-columns:1fr}.gallery{columns:2 150px;column-gap:10px}.card{margin-bottom:10px;border-radius:14px}
+ .flower-orbit{inset:-20px}.hero-sub{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="petals" id="petals"></div>
+
+<nav>
+  <div class="logo">Fahma, 19 ✿</div>
+  <div class="navpill">made with a little too much love</div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="flower-orbit"><span>🌼</span><span>🌻</span><span>🌼</span><span>🌻</span></div>
+    <div class="kicker">August? no — today is your day.</div>
+    <h1>Happy Birthday<em>Fahma.</em></h1>
+    <p class="hero-sub">19 looks good on you. This little corner of the internet is just for you — because apparently one birthday text wasn't enough.</p>
+    <a class="cta" href="#letter">open your little surprise <span>↓</span></a>
+  </div>
+</header>
+
+<section class="section" id="letter">
+  <div class="section-inner">
+    <div class="eyebrow">a letter, not a lecture</div>
+    <h2 class="title">For the girl<br><em>who turns 19 today.</em></h2>
+    <div class="note">
+      <p>
+        Happy 19th birthday, Fahmaaa 🤍<br><br>
+        Semoga di umur yang baru ini kamu makin sehat, makin kuat, dan makin sayang sama diri sendiri.
+        Aku cuma mau kamu jangan terlalu sering ngeluh, jangan terlalu capek mikirin apa kata orang,
+        dan jangan lupa kalau kamu juga harus jadi prioritas buat diri kamu sendiri.<br><br>
+        Ayok olahraga. Ayok gym. Biar badan makin kuat, bukan cuma kuat menghadapi aku 😭.
+        Kalau ada sesuatu yang bikin kamu kepikiran, semoga kamu bisa belajar buat nggak membawa semuanya sendirian.
+        Kamu nggak harus selalu bikin semua orang senang.<br><br>
+        Terus satu lagi yang sangat penting: <strong>giginya cepetan dicabut yaaa.</strong>
+        Aku sudah cukup lama mendengar cerita ini 😭🦷<br><br>
+        Semoga tahun ini lebih banyak hal baik yang datang ke kamu.
+        Semoga kamu bisa tumbuh tanpa kehilangan sisi kamu yang aku suka,
+        ketawa lebih banyak, sakit lebih sedikit, dan punya keberanian buat ngejar hal-hal yang kamu mau.
+        Dan kalau nanti tahun ini terasa berat, semoga kamu ingat kalau kamu nggak harus melewatinya sendirian.<br><br>
+        Happy birthday, Fahma. Stay healthy, stay strong, and please... <em>go to the gym.</em> 🌼
+      </p>
+      <div class="sign">— from someone whose music taste is objectively louder than yours</div>
+    </div>
+  </div>
+</section>
+
+<section class="section memories">
+  <div class="section-inner">
+    <div class="eyebrow">little pieces of us</div>
+    <h2 class="title">Some memories<br><em>worth keeping.</em></h2>
+    <p class="lead">Aku masukin foto-foto yang kamu kasih semuanya. Nggak semuanya harus sempurna — justru yang bikin berharga adalah ceritanya.</p>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="eyebrow">19 things, but not really</div>
+    <h2 class="title">Things I hope<br><em>you remember.</em></h2>
+    <div class="reasons">
+      <article class="reason"><div class="num">01</div><h3>Choose yourself.</h3><p>Nggak semua pendapat orang harus kamu bawa pulang. Kamu boleh bilang “nggak” dan tetap jadi orang baik.</p></article>
+      <article class="reason"><div class="num">02</div><h3>Get stronger.</h3><p>Bukan cuma soal gym. Semoga kamu makin kuat menghadapi hari-hari yang nggak sesuai rencana.</p></article>
+      <article class="reason"><div class="num">03</div><h3>Take care.</h3><p>Makan yang bener, gerak lebih banyak, istirahat cukup. Tubuh kamu juga pantas diperhatiin.</p></article>
+      <article class="reason"><div class="num">04</div><h3>Laugh more.</h3><p>Semoga tahun ini punya jauh lebih banyak momen yang bikin kamu ketawa sampai lupa waktu.</p></article>
+      <article class="reason"><div class="num">05</div><h3>Dream bigger.</h3><p>Jangan mengecilkan mimpi cuma karena takut gagal. Coba dulu. Nanti kita pikirin sisanya.</p></article>
+      <article class="reason"><div class="num">06</div><h3>And yes…</h3><p>GIGI. DICABUT. CEPETAN. Ini bukan saran lagi. Ini sudah menjadi agenda nasional. 🦷</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section music">
+  <div class="section-inner">
+    <div class="eyebrow">our soundtrack</div>
+    <h2 class="title">A song between<br><em>two different worlds.</em></h2>
+    <p class="lead">Karena kamu Taylor Swift dan aku rap/rock, kita butuh jalan tengah. Jadi pilihanku: <strong>“Yellow” — Coldplay.</strong> Warm, simple, sedikit nostalgic, dan cocok banget sama warna halaman ini.</p>
+    <div class="musicbox">
+      <div class="disc">✿</div>
+      <h3>Yellow</h3>
+      <p>Coldplay · play it when you're reading this.</p>
+      <a class="musiclink" target="_blank" rel="noopener" href="https://open.spotify.com/search/Coldplay%20Yellow">open on Spotify ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div>
+    <div class="eyebrow">one last thing</div>
+    <h2>Happy 19th,<br><em>Fahma. 🌼</em></h2>
+    <p>Semoga umur 19 jadi awal dari banyak hal yang lebih baik. More health. More strength. More laughter. Less overthinking. More gym. And yes — finally, that tooth. 😭</p>
+    <button class="cta" id="surpriseBtn" type="button">one last surprise ✦</button>
+    <div id="surprise">Kalau suatu hari kamu merasa nggak cukup kuat, baca ini lagi: kamu sudah melewati banyak hal sampai bisa sampai di umur 19. Jadi jangan terlalu keras sama diri sendiri. Pelan-pelan aja. Kamu punya banyak waktu untuk tumbuh. 🤍</div>
+  </div>
+</section>
+
+<footer>made for Fahma · 19 · with flowers, memories & a little bit of chaos ✿</footer>
+
+<script>
+const photos = [
+"7aed5491-a526-47bb-9e58-64c8acf0e201.jpeg",
+"d10a8186-ab85-401b-b692-11822f74acf7.jpeg",
+"d52c2dd7-2e76-45a3-a1f5-0eba83303798.jpeg",
+"e301a6ec-7419-4b24-84e1-9884a51513f8.jpeg",
+"66e9e9b9-f064-4d56-930d-fe10ed2c00b2.jpeg",
+"IMG_9413.jpeg",
+"IMG_5869.jpeg",
+"699E2A1C-36B5-4EE1-B9DD-28052446BD97.png",
+"IMG_1767255688887.jpeg",
+"3D963744-0F42-4145-B894-B473E0247296.png",
+"IMG_7936.jpeg",
+"IMG_7938 (1).jpeg",
+"IMG_7938.jpeg",
+"54e8148e-68b9-443f-95fd-77f51bd7d429.jpeg",
+"IMG_9193.jpeg",
+"FullSizeRender.jpeg",
+"82c17d74-72ea-45a1-93f9-e5e654ada5a0.jpeg"
+];
+const captions = [
+"you, being you.",
+"a frame worth keeping.",
+"one of those little moments.",
+"pretty without trying.",
+"another memory.",
+"still one of my favorites.",
+"the kind of photo you don't delete.",
+"19 looks good already.",
+"just a little piece of us."
+];
+const gallery = document.getElementById("gallery");
+photos.forEach((p,i)=>{
+  const fig=document.createElement("figure");
+  fig.className="card";
+  fig.innerHTML=`<img loading="lazy" src="photos/${encodeURIComponent(p)}" alt="Memory ${i+1}"><figcaption>${captions[i%captions.length]}</figcaption>`;
+  gallery.appendChild(fig);
+});
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}})
+},{threshold:.12});
+document.querySelectorAll(".card,.reason").forEach(el=>observer.observe(el));
+
+const petals=document.getElementById("petals");
+for(let i=0;i<22;i++){
+ const s=document.createElement("span"); s.className="petal";
+ s.textContent=["✿","✦","·","🌼"][Math.floor(Math.random()*4)];
+ s.style.left=Math.random()*100+"%";
+ s.style.fontSize=(10+Math.random()*15)+"px";
+ s.style.animationDuration=(8+Math.random()*10)+"s";
+ s.style.animationDelay=(-Math.random()*15)+"s";
+ s.style.setProperty("--drift",(Math.random()*160-80)+"px");
+ petals.appendChild(s);
+}
+document.addEventListener("pointermove",e=>{
+ if(Math.random()>.78){
+   const f=document.createElement("span"); f.className="cursor-flower"; f.textContent="✿";
+   f.style.left=e.clientX+"px"; f.style.top=e.clientY+"px"; document.body.appendChild(f);
+   setTimeout(()=>f.remove(),900);
+ }
+});
+document.getElementById("surpriseBtn").onclick=()=>{
+ const box=document.getElementById("surprise");
+ box.style.display=box.style.display==="block"?"none":"block";
+ if(box.style.display==="block"){
+   for(let i=0;i<28;i++){
+    const f=document.createElement("span"); f.className="cursor-flower"; f.textContent=["🌼","✿","♥"][i%3];
+    f.style.left=(30+Math.random()*40)+"vw"; f.style.top=(45+Math.random()*15)+"vh";
+    document.body.appendChild(f); setTimeout(()=>f.remove(),1200);
+   }
+ }
+};
+</script>
+</body>
+</html>
